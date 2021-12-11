@@ -1,9 +1,9 @@
 export default function TelaDeFracasso(){
     return(
-        <section className= "telaDeFracasso naoAparece">
+        <section className= "telaDeFracasso">
             <img className = "miniLogo" src = "assets/logo-mini.png"/>
             <div className = "resultado">
-                <span>Putz...</span>
+                <span>Putz..</span>
                 <img src = "assets/sad.png" />
             </div>
             <span className = "motivo">Você esqueceu alguns flashcards</span>

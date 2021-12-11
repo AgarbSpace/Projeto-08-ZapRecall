@@ -1,9 +1,9 @@
 export default function TelaDeSucesso(){
     return(
-        <section className = "telaDeSucesso naoAparece">
+        <section className = "telaDeSucesso">
             <img className = "miniLogo" src = "assets/logo-mini.png"/>
             <div className = "resultado">
-                <span>Parabéns!</span>
+                <span>PARABÉNS!</span>
                 <img src = "assets/party.png" />
             </div>
             <span className = "motivo">Você não esqueceu nenhum flashcard!</span>
