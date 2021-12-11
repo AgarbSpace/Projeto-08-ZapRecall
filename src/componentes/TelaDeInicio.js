@@ -1,9 +1,9 @@
-export default function TelaDeInicio(){
+export default function TelaDeInicio({botaoInicio, setBotaoInicio}){
     return (
         <div>
-            <section className="telaDeInicio naoAparece">
+            <section className="telaDeInicio">
                 <img className="logoDoInicio" src="assets/logo.png" />
-                <button className="botaoDeInicio">
+                <button className="botaoDeInicio" onClick = {() => setBotaoInicio(botaoInicio+1)}>
                     <span>Praticar React</span>
                     <img src="assets/next.png"/>
                 </button>
