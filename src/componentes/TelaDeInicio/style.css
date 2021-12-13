@@ -1,0 +1,40 @@
+.telaDeInicio {
+    width: 345px;
+    height: 611px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logoDoInicio {
+    width: 218px;
+    height: 279px;
+  
+    margin-bottom: 260px;
+  }
+  
+  .botaoDeInicio {
+    width: 345px;
+    height: 72px;
+  
+    border: 3px solid #ffef61;
+    border-radius: 12px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  
+  .botaoDeInicio img {
+    width: 23px;
+    height: 23px;
+  
+    margin-left: 7px;
+  }
+  

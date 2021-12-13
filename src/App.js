@@ -1,8 +1,10 @@
 import React from "react";
-import TelaDeInicio from "./componentes/TelaDeInicio";
-import TelaDasCartas from "./componentes/TelaDasCartas";
-import TelaDeSucesso from "./componentes/TelaDeSucesso";
-import TelaDeFracasso from "./componentes/TelaDeFracasso";
+import TelaDeInicio from "./componentes/TelaDeInicio/index.js";
+import TelaDasCartas from "./componentes/TelaDasCartas/index.js";
+import TelaDeSucesso from "./componentes/TelaDeSucesso/index.js";
+import TelaDeFracasso from "./componentes/TelaDeFracasso/index.js";
+import "./reset.css";
+import "./style.css";
 
 export default function App(){
     const vetorDeCartas = [{pergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript"},

@@ -1,5 +1,7 @@
 import React from "react";
-import App from "../App";
+import "./style.css"
+import miniLogo from "../../assets/logo-mini.png"
+import setinhaVirar from "../../assets/turn.png"
 
 export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas, contador, setContador, bordaDaCarta, setBordaDaCarta, botoesDaCarta, setTemIncorreto, setBotaoInicio}){
     const botoes = [
@@ -19,7 +21,6 @@ export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas
     }
 
     function mudarBorda(botao){
-        console.log(botao);
         setFaceDaCarta("trasRespondido")
         if(botao === 1){
             setBordaDaCarta("cartaPreta")
@@ -41,20 +42,20 @@ export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas
     if(faceDaCarta === "frente"){
         return(
             <section className = "telaDasCartas">
-            <img className = "miniLogo" src = "assets/logo-mini.png"/>
+            <img className = "miniLogo" src = {miniLogo}/>
             <div className = "carta" data-identifier="flashcard">
                 <span className = "contador" data-identifier="counter">{contador + 1}/{vetorDeCartas.length}</span>
                 <div  className="face">
                     {faceDaFrenteJSX[contador]}
                 </div>
-                <img className = "iconeVirar" src = "assets/turn.png" onClick={() => setFaceDaCarta("tras")} data-identifier="arrow"/>
+                <img className = "iconeVirar" src = {setinhaVirar} onClick={() => setFaceDaCarta("tras")} data-identifier="arrow"/>
             </div>
         </section>
         )
     }else if(faceDaCarta === "tras"){
         return (
             <section className = "telaDasCartas">
-                <img className = "miniLogo" src = "assets/logo-mini.png"/>
+                <img className = "miniLogo" src = {miniLogo}/>
                 <div className = "carta" data-identifier="flashcard">
                     <span className = "contador" data-identifier="counter">{contador + 1}/{vetorDeCartas.length}</span>
                     <div className="face">
@@ -69,17 +70,16 @@ export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas
         )
 
     }else if(faceDaCarta === "trasRespondido" && (contador+1) === vetorDeCartas.length){
-        console.log("entrou aqui");
         return(
             <section className = "telaDasCartas">
-                <img className = "miniLogo" src = "assets/logo-mini.png"/>
+                <img className = "miniLogo" src = {miniLogo}/>
                 <div className = {bordaDaCarta} data-identifier="flashcard">
                     <span className = "contador" data-identifier="counter">{contador + 1}/{vetorDeCartas.length}</span>
                     <div className="face">
                         <span className = "miniPergunta">{faceDaFrenteJSX[contador].props.children}</span>
                         {faceDeTrasJSX[contador]}
                         <div className="setinha">
-                            <img className = "iconeVirar" src = "assets/turn.png" onClick = {() => irParaTelaFinal()} data-identifier="arrow"/>
+                            <img className = "iconeVirar" src = {setinhaVirar} onClick = {() => irParaTelaFinal()} data-identifier="arrow"/>
                         </div>
                     </div>
                 </div>
@@ -88,14 +88,14 @@ export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas
     }else if(faceDaCarta === "trasRespondido"){
         return(
             <section className = "telaDasCartas">
-                <img className = "miniLogo" src = "assets/logo-mini.png"/>
+                <img className = "miniLogo" src = {miniLogo}/>
                 <div className = {bordaDaCarta} data-identifier="flashcard">
                     <span className = "contador" data-identifier="counter">{contador + 1}/{vetorDeCartas.length}</span>
                     <div className="face">
                         <span className = "miniPergunta">{faceDaFrenteJSX[contador].props.children}</span>
                         {faceDeTrasJSX[contador]}
                         <div className="setinha">
-                            <img className = "iconeVirar" src = "assets/turn.png" onClick = {() => virarCartaEAumentarContador()} data-identifier="arrow"/>
+                            <img className = "iconeVirar" src = {setinhaVirar} onClick = {() => virarCartaEAumentarContador()} data-identifier="arrow"/>
                         </div>
                     </div>
                 </div>
