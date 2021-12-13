@@ -19,7 +19,6 @@ export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas
     }
 
     function mudarBorda(botao){
-        console.log(botao);
         setFaceDaCarta("trasRespondido")
         if(botao === 1){
             setBordaDaCarta("cartaPreta")
@@ -69,7 +68,6 @@ export default function TelaDasCartas({faceDaCarta, setFaceDaCarta,vetorDeCartas
         )
 
     }else if(faceDaCarta === "trasRespondido" && (contador+1) === vetorDeCartas.length){
-        console.log("entrou aqui");
         return(
             <section className = "telaDasCartas">
                 <img className = "miniLogo" src = "assets/logo-mini.png"/>
