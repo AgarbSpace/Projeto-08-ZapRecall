@@ -9,7 +9,7 @@ I made this project for mix games and learning. It improves our way to learn mor
 
 ### Technologies
 
-React
+React, JavaScript, Css
 
 ### How to run
 
